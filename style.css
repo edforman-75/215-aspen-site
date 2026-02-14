@@ -1,0 +1,321 @@
+/* 215 Aspen Drive — Project Site */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+:root {
+  --walnut: #5c3d2e;
+  --walnut-light: #8b6b4a;
+  --oatmeal: #f0ebe0;
+  --cream: #faf8f3;
+  --cognac: #b05c2e;
+  --cognac-light: #d4875c;
+  --stone: #c8b8a0;
+  --stone-light: #e8dcc8;
+  --charcoal: #2c2a26;
+  --warm-gray: #8a8580;
+  --warm-gray-light: #c8c4be;
+  --white: #fffdf8;
+  --serif: 'DM Serif Display', Georgia, serif;
+  --sans: 'DM Sans', -apple-system, sans-serif;
+  --max-w: 1100px;
+  --gap: clamp(16px, 4vw, 40px);
+}
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  font-family: var(--sans);
+  background: var(--cream);
+  color: var(--charcoal);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* NAV */
+.site-nav {
+  position: sticky; top:0; z-index:100;
+  background: var(--walnut);
+  border-bottom: 3px solid var(--cognac);
+  padding: 0 var(--gap);
+}
+.nav-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 56px;
+  flex-wrap: wrap;
+}
+.nav-brand {
+  font-family: var(--serif);
+  color: var(--oatmeal);
+  font-size: 18px;
+  text-decoration: none;
+}
+.nav-brand span { color: var(--cognac-light); }
+.nav-links { display:flex; gap:2px; flex-wrap:wrap; }
+.nav-links a {
+  color: var(--stone);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+.nav-links a:hover, .nav-links a.active {
+  color: var(--oatmeal);
+  background: rgba(255,255,255,0.1);
+}
+
+/* HERO */
+.hero {
+  background: var(--walnut);
+  padding: clamp(40px,7vw,80px) var(--gap);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content:'';
+  position:absolute; inset:0;
+  background: repeating-linear-gradient(-45deg,transparent,transparent 20px,rgba(255,255,255,0.015) 20px,rgba(255,255,255,0.015) 21px);
+}
+.hero h1 {
+  font-family: var(--serif);
+  color: var(--oatmeal);
+  font-size: clamp(28px,5vw,52px);
+  position: relative;
+}
+.hero h1 span { color: var(--cognac-light); }
+.hero .subtitle {
+  color: var(--stone);
+  font-size: clamp(14px,2vw,18px);
+  margin-top: 10px;
+  position: relative;
+}
+
+/* PAGE WRAP */
+.page-wrap {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: var(--gap);
+}
+
+/* SECTIONS */
+.section { padding: clamp(32px,5vw,64px) 0; }
+.section + .section { border-top: 1px solid var(--stone-light); }
+.section-label {
+  font-size: 11px; font-weight:700;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--cognac); margin-bottom: 6px;
+}
+.section h2 {
+  font-family: var(--serif);
+  font-size: clamp(22px,3vw,34px);
+  color: var(--walnut);
+  margin-bottom: 14px;
+}
+.section h3 {
+  font-family: var(--serif);
+  font-size: 20px;
+  color: var(--walnut);
+  margin: 28px 0 10px;
+}
+.section p { max-width:720px; margin-bottom:12px; }
+
+/* ZONE BADGES */
+.zone-badge {
+  display:inline-block;
+  font-size:10px; font-weight:700;
+  letter-spacing:1.5px; text-transform:uppercase;
+  padding:3px 8px; border-radius:3px; margin-bottom:8px;
+}
+.z-living { background:#e8f0e8; color:#3a6640; }
+.z-dining { background:#e0e8f0; color:#3a5066; }
+.z-piano { background:#f0e8e0; color:#805830; }
+.z-kitchen { background:#f0e0e0; color:#804040; }
+.z-reading { background:#e8e0f0; color:#604080; }
+
+/* PRODUCT GRID */
+.product-grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+  gap:24px; margin:28px 0;
+}
+.product-card {
+  background: var(--white);
+  border:1px solid var(--stone-light);
+  border-radius:8px;
+  overflow:hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.product-card:hover {
+  transform:translateY(-3px);
+  box-shadow:0 8px 24px rgba(92,61,46,0.12);
+}
+.product-card img {
+  width:100%; aspect-ratio:4/3;
+  object-fit:cover; display:block;
+  background: var(--oatmeal);
+}
+.product-body { padding:18px; }
+.product-name {
+  font-family: var(--serif);
+  font-size:19px; color:var(--walnut); margin-bottom:4px;
+}
+.product-spec {
+  font-size:13px; color:var(--warm-gray);
+  line-height:1.5; margin-bottom:6px;
+}
+.product-price {
+  font-size:17px; font-weight:700;
+  color:var(--cognac); margin:10px 0;
+}
+.product-link {
+  display:inline-block;
+  font-size:13px; font-weight:500;
+  color:#4a7090; text-decoration:none;
+  border-bottom:1px solid transparent;
+  transition:border-color 0.2s;
+}
+.product-link:hover { border-bottom-color:#4a7090; }
+
+/* CART TABLE */
+.cart-table {
+  width:100%; border-collapse:collapse;
+  margin:24px 0; font-size:14px;
+}
+.cart-table th {
+  text-align:left;
+  font-size:11px; font-weight:700;
+  letter-spacing:1px; text-transform:uppercase;
+  color:var(--warm-gray);
+  padding:10px 12px;
+  border-bottom:2px solid var(--walnut);
+}
+.cart-table td {
+  padding:10px 12px;
+  border-bottom:1px solid var(--stone-light);
+  vertical-align:top;
+}
+.cart-table tr:hover td { background:rgba(240,235,224,0.4); }
+.cart-table .item-name { font-weight:700; color:var(--walnut); }
+.cart-table .item-link {
+  font-size:12px; color:#4a7090; text-decoration:none; display:block; margin-top:2px;
+  word-break:break-all;
+}
+.cart-table .item-link:hover { text-decoration:underline; }
+.cart-table .price { text-align:right; font-weight:700; white-space:nowrap; }
+.cart-total td {
+  font-weight:700; font-size:16px;
+  border-top:2px solid var(--walnut);
+  border-bottom:none;
+}
+.cart-total .price { color:var(--cognac); }
+
+/* SAMPLE LIST */
+.sample-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+  gap:12px; margin:24px 0;
+}
+.sample-card {
+  display:flex; align-items:center; gap:14px;
+  padding:14px 16px;
+  background:var(--white);
+  border:1px solid var(--stone-light);
+  border-radius:6px;
+}
+.sample-swatch {
+  width:44px; height:44px; border-radius:6px;
+  border:1px solid rgba(0,0,0,0.08); flex-shrink:0;
+}
+.sample-info { flex:1; }
+.sample-name { font-weight:700; font-size:14px; color:var(--walnut); }
+.sample-desc { font-size:12px; color:var(--warm-gray); }
+
+/* STATS ROW */
+.stats-row {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:16px; margin:24px 0;
+}
+.stat-card {
+  background:var(--white);
+  border:1px solid var(--stone-light);
+  border-radius:8px;
+  padding:20px; text-align:center;
+}
+.stat-num {
+  font-family:var(--serif);
+  font-size:28px; color:var(--cognac);
+}
+.stat-label {
+  font-size:12px; color:var(--warm-gray);
+  text-transform:uppercase; letter-spacing:1px;
+  margin-top:4px;
+}
+
+/* PLAN EMBED */
+.plan-frame {
+  background:var(--white);
+  border:1px solid var(--stone-light);
+  border-radius:8px;
+  padding:16px;
+  overflow-x:auto;
+  margin:20px 0;
+}
+.plan-frame iframe {
+  width:100%; min-height:700px; border:none;
+}
+
+/* PALETTE ROW */
+.palette-row {
+  display:flex; gap:8px; margin:16px 0; flex-wrap:wrap;
+}
+.palette-chip {
+  width:64px; height:64px; border-radius:8px;
+  border:1px solid rgba(0,0,0,0.06);
+  position:relative;
+}
+.palette-chip::after {
+  content:attr(data-label);
+  position:absolute; bottom:-18px; left:0; width:100%;
+  text-align:center;
+  font-size:10px; color:var(--warm-gray);
+}
+
+/* CHECKLIST */
+.checklist { list-style:none; margin:16px 0; }
+.checklist li {
+  padding:6px 0 6px 28px;
+  position:relative;
+  font-size:15px;
+}
+.checklist li::before {
+  content:'✓'; position:absolute; left:0; top:6px;
+  color:var(--cognac); font-weight:700;
+}
+.checklist li.pending::before {
+  content:'○'; color:var(--warm-gray-light);
+}
+
+/* FOOTER */
+.site-footer {
+  background:var(--walnut);
+  color:var(--stone);
+  padding:24px var(--gap);
+  text-align:center;
+  font-size:13px;
+}
+.site-footer a { color:var(--cognac-light); }
+
+/* RESPONSIVE */
+@media (max-width:600px) {
+  .nav-inner { height:auto; padding:8px 0; }
+  .nav-links { gap:0; }
+  .nav-links a { padding:4px 8px; font-size:11px; }
+  .product-grid { grid-template-columns:1fr; }
+  .cart-table { font-size:12px; }
+}

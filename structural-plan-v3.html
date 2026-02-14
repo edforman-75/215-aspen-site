@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>215 Aspen Drive — Structural Plan v3</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Courier New', monospace;
+    background: #faf9f6;
+    color: #222;
+    padding: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  h1 { font-size: 20px; font-weight: bold; letter-spacing: 1px; margin-bottom: 4px; }
+  .subtitle { font-size: 12px; color: #666; margin-bottom: 32px; }
+  h2 {
+    font-size: 14px; font-weight: bold; letter-spacing: 1px;
+    text-transform: uppercase; margin: 40px 0 12px; color: #444;
+    border-top: 2px solid #222; padding-top: 8px;
+  }
+  .note { font-size: 11px; color: #888; margin: 4px 0 16px; line-height: 1.5; }
+  .plan-wrap {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 12px 0 32px;
+    overflow-x: auto;
+  }
+  svg text { font-family: 'Courier New', monospace; }
+</style>
+</head>
+<body>
+
+<h1>215 ASPEN DRIVE — STRUCTURAL PLAN v3</h1>
+<p class="subtitle">Ketchum, Idaho · Scale: 1.5 px/inch (1"=1'-0" at ~18px/ft) · 32' × 26' = 832 sq ft</p>
+
+<!-- ===================== FLOOR PLAN ===================== -->
+<h2>Floor Plan</h2>
+<p class="note">
+  Top = Kitchen cabinet wall (32', low ceiling 7'3"). Bottom = TV wall (32', high ceiling 9'7").<br>
+  Left = Deck/piano wall (26'). Right = Bedroom passage wall (26').<br>
+  Fireplace opening faces LEFT (deck). 1-ft grid overlay. Red dashed lines = cross-section cuts (A-A, B-B, C-C, D-D).
+</p>
+
+<div class="plan-wrap">
+<svg width="820" height="720" viewBox="0 0 820 720">
+  <defs>
+    <marker id="a" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#999"/></marker>
+    <marker id="ar" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><path d="M6,0 L0,3 L6,6" fill="#999"/></marker>
+    <pattern id="grid" width="18" height="18" patternUnits="userSpaceOnUse">
+      <path d="M 18 0 L 0 0 0 18" fill="none" stroke="#e8e4dc" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+
+  <g transform="translate(110, 90)">
+    <!-- Room: 576px wide (32'=384") × 468px tall (26'=312") -->
+    <!-- 1.5 px per inch, 18px per foot -->
+
+    <!-- Grid -->
+    <rect x="0" y="0" width="576" height="468" fill="url(#grid)"/>
+
+    <!-- ===== OUTER WALLS (8px thick) ===== -->
+    <!-- Top: Kitchen cabinet wall 32' -->
+    <rect x="-8" y="-8" width="592" height="8" fill="#222"/>
+    <!-- Bottom: TV wall 32' -->
+    <rect x="-8" y="468" width="592" height="8" fill="#222"/>
+    <!-- Left: Deck wall 26' -->
+    <rect x="-8" y="-8" width="8" height="484" fill="#222"/>
+    <!-- Right: Passage wall 26' -->
+    <rect x="576" y="-8" width="8" height="484" fill="#222"/>
+
+    <!-- ===== KITCHEN CABINET WALL OPENINGS (top, y=-8) ===== -->
+    <!-- L to R (deck to passage): 108" buffet, 76" cabs, 2", 55" window, 2", 45" cabs, 8", 75" slider, 8" -->
+    <!-- Px: 162, 114, 3, 82.5, 3, 67.5, 12, 112.5, 12 = 568.5 ≈ 576 -->
+    <!-- Window over sink: x = 162+114+3 = 279 to 279+82.5 = 361.5 -->
+    <rect x="279" y="-8" width="82.5" height="8" fill="#faf9f6"/>
+    <line x1="279" y1="-4" x2="361.5" y2="-4" stroke="#4a90d9" stroke-width="2"/>
+    <line x1="279" y1="-7" x2="279" y2="-1" stroke="#4a90d9" stroke-width="1.5"/>
+    <line x1="361.5" y1="-7" x2="361.5" y2="-1" stroke="#4a90d9" stroke-width="1.5"/>
+    <!-- Sliding door: x = 279+82.5+3+67.5+12 = 444 to 444+112.5 = 556.5 -->
+    <rect x="444" y="-8" width="112.5" height="8" fill="#faf9f6"/>
+    <line x1="444" y1="-4" x2="556.5" y2="-4" stroke="#d94a4a" stroke-width="2"/>
+    <line x1="500" y1="-7" x2="500" y2="-1" stroke="#d94a4a" stroke-width="1"/>
+
+    <!-- ===== TV WALL OPENINGS (bottom, y=468) ===== -->
+    <!-- From RIGHT (passage, x=576): 42" stair(wall above), 41" door, 55" wall(TV), 4 windows, 32" wall -->
+    <!-- Stair opening is already drawn separately -->
+    <!-- Door: x=576-63-61.5=451.5 to 513 -->
+    <rect x="451.5" y="468" width="61.5" height="8" fill="#faf9f6"/>
+    <line x1="451.5" y1="472" x2="513" y2="472" stroke="#d94a4a" stroke-width="2"/>
+    <!-- 55" wall (TV): x=451.5-82.5=369 to 451.5 — solid wall, no opening -->
+    <!-- Four windows from x=369 going left: each 78px, gap 3px -->
+    <!-- Win4: x=369-78=291 to 369 -->
+    <rect x="291" y="468" width="78" height="8" fill="#faf9f6"/>
+    <line x1="291" y1="472" x2="369" y2="472" stroke="#4a90d9" stroke-width="2"/>
+    <line x1="291" y1="469" x2="291" y2="475" stroke="#4a90d9" stroke-width="1.5"/>
+    <line x1="369" y1="469" x2="369" y2="475" stroke="#4a90d9" stroke-width="1.5"/>
+    <!-- Win3: x=291-3-78=210 to 288 -->
+    <rect x="210" y="468" width="78" height="8" fill="#faf9f6"/>
+    <line x1="210" y1="472" x2="288" y2="472" stroke="#4a90d9" stroke-width="2"/>
+    <line x1="210" y1="469" x2="210" y2="475" stroke="#4a90d9" stroke-width="1.5"/>
+    <line x1="288" y1="469" x2="288" y2="475" stroke="#4a90d9" stroke-width="1.5"/>
+    <!-- Win2: x=210-3-78=129 to 207 -->
+    <rect x="129" y="468" width="78" height="8" fill="#faf9f6"/>
+    <line x1="129" y1="472" x2="207" y2="472" stroke="#4a90d9" stroke-width="2"/>
+    <line x1="129" y1="469" x2="129" y2="475" stroke="#4a90d9" stroke-width="1.5"/>
+    <line x1="207" y1="469" x2="207" y2="475" stroke="#4a90d9" stroke-width="1.5"/>
+    <!-- Win1: x=129-3-78=48 to 126 -->
+    <rect x="48" y="468" width="78" height="8" fill="#faf9f6"/>
+    <line x1="48" y1="472" x2="126" y2="472" stroke="#4a90d9" stroke-width="2"/>
+    <line x1="48" y1="469" x2="48" y2="475" stroke="#4a90d9" stroke-width="1.5"/>
+    <line x1="126" y1="469" x2="126" y2="475" stroke="#4a90d9" stroke-width="1.5"/>
+    <!-- 32" piano wall: x=0 to 48 -->
+
+    <!-- ===== PASSAGE WALL OPENINGS (right, x=576) ===== -->
+    <!-- Wall is 26'=312". From top (kitchen): 130" wall, 32" passage, 150" stair section -->
+    <!-- Adjusted: 12.5' from TV wall to passage opening -->
+    <!-- From bottom (TV, y=468): 150"=225px up to passage start, then 32"=48px passage -->
+    <!-- Passage: y = 468-225-48 = 195 to y = 468-225 = 243 -->
+    <rect x="576" y="195" width="8" height="48" fill="#faf9f6"/>
+    <line x1="580" y1="195" x2="580" y2="243" stroke="#d94a4a" stroke-width="2"/>
+
+    <!-- ===== DECK WALL OPENINGS (left, x=-8) ===== -->
+    <!-- From top (kitchen): 38"=57px wall, 76"=114px win, 4"=6px, 74"=111px slider, 4"=6px, 76"=114px win, rest -->
+    <!-- Win1: y=57 to 171 -->
+    <rect x="-8" y="57" width="8" height="114" fill="#faf9f6"/>
+    <line x1="-4" y1="57" x2="-4" y2="171" stroke="#4a90d9" stroke-width="2"/>
+    <line x1="-7" y1="57" x2="-1" y2="57" stroke="#4a90d9" stroke-width="1.5"/>
+    <line x1="-7" y1="171" x2="-1" y2="171" stroke="#4a90d9" stroke-width="1.5"/>
+    <!-- Slider: y=177 to 288 -->
+    <rect x="-8" y="177" width="8" height="111" fill="#faf9f6"/>
+    <line x1="-4" y1="177" x2="-4" y2="288" stroke="#d94a4a" stroke-width="2"/>
+    <line x1="-7" y1="232" x2="-1" y2="232" stroke="#d94a4a" stroke-width="1"/>
+    <!-- Win2: y=294 to 408 -->
+    <rect x="-8" y="294" width="8" height="114" fill="#faf9f6"/>
+    <line x1="-4" y1="294" x2="-4" y2="408" stroke="#4a90d9" stroke-width="2"/>
+    <line x1="-7" y1="294" x2="-1" y2="294" stroke="#4a90d9" stroke-width="1.5"/>
+    <line x1="-7" y1="408" x2="-1" y2="408" stroke="#4a90d9" stroke-width="1.5"/>
+
+    <!-- ===== KITCHEN CABINETS (29" deep = 43.5px from top wall) ===== -->
+    <!-- Cab+fridge run: starts at x=162 (after 108" buffet wall), width 76"=114px -->
+    <rect x="162" y="0" width="114" height="43.5" fill="#e8dcc0" stroke="#999" stroke-width="1"/>
+    <text x="219" y="28" style="font-size:8px;fill:#666;text-anchor:middle">CABS+FRIDGE</text>
+    <!-- Cab+oven run: x = 279+82.5+3 = 364.5, width 67.5px -->
+    <rect x="364.5" y="0" width="67.5" height="43.5" fill="#e8dcc0" stroke="#999" stroke-width="1"/>
+    <text x="398" y="28" style="font-size:8px;fill:#666;text-anchor:middle">OVENS</text>
+
+    <!-- ===== KITCHEN ISLAND (corrected shape) ===== -->
+    <!-- Inner edge at y = 43.5 (cabs) + 81 (54" passage) = 124.5 -->
+    <!-- Left edge at x=162, right edge at x=162+225=387 -->
+    <!-- Right (passage) end: 31" deep straight for 28" → x=387 to 387-42=345, y=124.5 to 124.5+46.5=171 -->
+    <!-- Then curves out to apex at 117" from wall = 175.5px (y=175.5), near x≈240 -->
+    <!-- Left (deck) end: curves back to ~y=140 at x=162 -->
+    <path d="M 387 124.5 L 387 171 L 345 171 Q 290 180 240 175.5 Q 200 172 170 150 L 162 140 L 162 124.5 Z"
+          fill="#e0dcd4" stroke="#666" stroke-width="1.5"/>
+    <text x="280" y="155" style="font-size:9px;fill:#444;text-anchor:middle">ISLAND</text>
+    <text x="280" y="166" style="font-size:7px;fill:#888;text-anchor:middle">150" long, curved</text>
+
+    <!-- ===== FREESTANDING FIREPLACE ===== -->
+    <!-- Opening faces LEFT (deck). Passage-to-deck direction = x-axis (32'). -->
+    <!-- Back of fireplace: 7'6"=90"=135px from passage wall (x=576) → x = 576-135 = 441 -->
+    <!-- Stone: 41"=61.5px → front of stone at x = 441-61.5 = 379.5 -->
+    <!-- Hearth shelf: 16"=24px → x = 379.5-24 = 355.5 -->
+    <!-- 80" wide in y-direction = 120px -->
+    <!-- Side 6' from TV wall: y = 468-108 = 360 (nearest side) -->
+    <!-- Other side: y = 360-120 = 240 -->
+
+    <!-- Stone mass -->
+    <rect x="379.5" y="240" width="61.5" height="120" fill="#c8b8a0" stroke="#666" stroke-width="1.5"/>
+    <!-- Hearth shelf -->
+    <rect x="355.5" y="240" width="24" height="120" fill="#d4c4a8" stroke="#888" stroke-width="1"/>
+    <!-- Opening indicator on left face -->
+    <rect x="356" y="272" width="3" height="56" fill="#8B4513" opacity="0.7"/>
+    <!-- Arrow showing opening direction -->
+    <line x1="357" y1="300" x2="330" y2="300" stroke="#8B4513" stroke-width="1.5"/>
+    <polygon points="330,296 322,300 330,304" fill="#8B4513"/>
+
+    <text x="410" y="296" style="font-size:9px;fill:#444;text-anchor:middle">FIRE-</text>
+    <text x="410" y="308" style="font-size:9px;fill:#444;text-anchor:middle">PLACE</text>
+    <text x="410" y="320" style="font-size:7px;fill:#888;text-anchor:middle">41" stone</text>
+    <text x="355" y="235" style="font-size:7px;fill:#888;text-anchor:middle">hearth 16"</text>
+    <text x="310" y="300" style="font-size:7px;fill:#8B4513;text-anchor:end">opening</text>
+
+    <!-- ===== STAIR OPENING ===== -->
+    <!-- Along passage wall (x=576), from TV wall (y=468) up 12.5'=150"=225px -->
+    <!-- x = 576-63=513 to 576 (42" wide), y = 468-225=243 to 468 -->
+    <rect x="513" y="243" width="63" height="225" fill="#f0ece4" stroke="#999" stroke-width="1" stroke-dasharray="6,3"/>
+    <!-- Stair treads -->
+    <line x1="513" y1="263" x2="576" y2="263" stroke="#ccc" stroke-width="0.5"/>
+    <line x1="513" y1="283" x2="576" y2="283" stroke="#ccc" stroke-width="0.5"/>
+    <line x1="513" y1="303" x2="576" y2="303" stroke="#ccc" stroke-width="0.5"/>
+    <line x1="513" y1="323" x2="576" y2="323" stroke="#ccc" stroke-width="0.5"/>
+    <line x1="513" y1="343" x2="576" y2="343" stroke="#ccc" stroke-width="0.5"/>
+    <line x1="513" y1="363" x2="576" y2="363" stroke="#ccc" stroke-width="0.5"/>
+    <line x1="513" y1="383" x2="576" y2="383" stroke="#ccc" stroke-width="0.5"/>
+    <line x1="513" y1="403" x2="576" y2="403" stroke="#ccc" stroke-width="0.5"/>
+    <line x1="513" y1="423" x2="576" y2="423" stroke="#ccc" stroke-width="0.5"/>
+    <line x1="513" y1="443" x2="576" y2="443" stroke="#ccc" stroke-width="0.5"/>
+    <!-- Railing -->
+    <line x1="513" y1="243" x2="513" y2="468" stroke="#666" stroke-width="2" stroke-dasharray="8,4"/>
+    <text x="544" y="365" style="font-size:8px;fill:#444;text-anchor:middle" transform="rotate(-90,544,365)">STAIR OPENING</text>
+    <text x="504" y="365" style="font-size:7px;fill:#888;text-anchor:middle" transform="rotate(-90,504,365)">railing</text>
+
+    <!-- Piano (ghost outline) -->
+    <path d="M 10 468 L 10 382 Q 65 380 85 415 L 85 468 Z"
+          fill="none" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
+    <text x="47" y="430" style="font-size:7px;fill:#aaa;text-anchor:middle">piano</text>
+    <text x="47" y="440" style="font-size:7px;fill:#aaa;text-anchor:middle">5'11"</text>
+
+    <!-- ===== DIMENSION LINES ===== -->
+    <!-- Top: 32' -->
+    <line x1="0" y1="-32" x2="576" y2="-32" stroke="#999" stroke-width="0.75" marker-start="url(#ar)" marker-end="url(#a)"/>
+    <text x="288" y="-38" style="font-size:9px;fill:#666;text-anchor:middle">32' (384")</text>
+    <!-- Right: 26' -->
+    <line x1="618" y1="0" x2="618" y2="468" stroke="#999" stroke-width="0.75" marker-start="url(#ar)" marker-end="url(#a)"/>
+    <text x="630" y="234" style="font-size:9px;fill:#666;text-anchor:middle" transform="rotate(90,630,234)">26' (312")</text>
+
+    <!-- Fireplace to TV: 6' -->
+    <line x1="450" y1="360" x2="450" y2="468" stroke="#999" stroke-width="0.75" marker-start="url(#ar)" marker-end="url(#a)"/>
+    <text x="458" y="418" style="font-size:7px;fill:#666;text-anchor:start">6'</text>
+    <!-- Back to passage: 7'6" -->
+    <line x1="441" y1="230" x2="576" y2="230" stroke="#999" stroke-width="0.75" marker-start="url(#ar)" marker-end="url(#a)"/>
+    <text x="508" y="224" style="font-size:7px;fill:#666;text-anchor:middle">7'6"</text>
+    <!-- Front to deck: 21' -->
+    <line x1="0" y1="230" x2="379.5" y2="230" stroke="#999" stroke-width="0.75" marker-start="url(#ar)" marker-end="url(#a)"/>
+    <text x="190" y="224" style="font-size:7px;fill:#666;text-anchor:middle">21' (incl hearth)</text>
+    <!-- Island depth from cabs -->
+    <line x1="145" y1="0" x2="145" y2="175.5" stroke="#999" stroke-width="0.5" marker-start="url(#ar)" marker-end="url(#a)" opacity="0.5"/>
+    <text x="133" y="90" style="font-size:7px;fill:#666;text-anchor:end">9'9"</text>
+    <!-- Stair width -->
+    <line x1="513" y1="480" x2="576" y2="480" stroke="#999" stroke-width="0.75" marker-start="url(#ar)" marker-end="url(#a)"/>
+    <text x="544" y="492" style="font-size:7px;fill:#666;text-anchor:middle">42"</text>
+
+    <!-- ===== CROSS-SECTION CUT LINES ===== -->
+    <!-- Cut A-A: vertical line through fireplace (y-direction) at x≈410 -->
+    <line x1="410" y1="-22" x2="410" y2="490" stroke="#d94a4a" stroke-width="1.5" stroke-dasharray="12,4,4,4"/>
+    <text x="410" y="-26" style="font-size:11px;fill:#d94a4a;text-anchor:middle;font-weight:bold">A</text>
+    <text x="410" y="506" style="font-size:11px;fill:#d94a4a;text-anchor:middle;font-weight:bold">A</text>
+    <!-- Cut B-B: vertical line through island at x≈270 -->
+    <line x1="270" y1="-22" x2="270" y2="490" stroke="#d94a4a" stroke-width="1.5" stroke-dasharray="12,4,4,4"/>
+    <text x="270" y="-26" style="font-size:11px;fill:#d94a4a;text-anchor:middle;font-weight:bold">B</text>
+    <text x="270" y="506" style="font-size:11px;fill:#d94a4a;text-anchor:middle;font-weight:bold">B</text>
+
+    <!-- Cut C-C: horizontal line at fireplace front (x≈355), looking toward deck -->
+    <line x1="-22" y1="300" x2="598" y2="300" stroke="#d94a4a" stroke-width="1.5" stroke-dasharray="12,4,4,4"/>
+    <text x="-30" y="304" style="font-size:11px;fill:#d94a4a;text-anchor:end;font-weight:bold">C</text>
+    <text x="606" y="304" style="font-size:11px;fill:#d94a4a;text-anchor:start;font-weight:bold">C</text>
+
+    <!-- Cut D-D: horizontal line at passage wall (x=576), looking toward deck -->
+    <line x1="-22" y1="220" x2="598" y2="220" stroke="#d94a4a" stroke-width="1.5" stroke-dasharray="12,4,4,4"/>
+    <text x="-30" y="224" style="font-size:11px;fill:#d94a4a;text-anchor:end;font-weight:bold">D</text>
+    <text x="606" y="224" style="font-size:11px;fill:#d94a4a;text-anchor:start;font-weight:bold">D</text>
+
+    <!-- ===== WALL LABELS ===== -->
+    <text x="288" y="-52" style="font-size:10px;fill:#444;text-anchor:middle">KITCHEN CABINET WALL (32') — LOW 7'3"</text>
+    <text x="288" y="528" style="font-size:10px;fill:#444;text-anchor:middle">TV WALL (32') — HIGH 9'7"</text>
+    <text x="-22" y="234" style="font-size:10px;fill:#444;text-anchor:middle" transform="rotate(-90,-22,234)">DECK / PIANO WALL (26')</text>
+    <text x="640" y="120" style="font-size:10px;fill:#444;text-anchor:middle" transform="rotate(90,640,120)">PASSAGE WALL (26')</text>
+
+    <!-- Feature labels -->
+    <text x="81" y="18" style="font-size:7px;fill:#888;text-anchor:middle">buffet wall (9')</text>
+    <text x="482" y="462" style="font-size:7px;fill:#888;text-anchor:middle">front door</text>
+    <text x="410" y="462" style="font-size:7px;fill:#888;text-anchor:middle">TV</text>
+    <text x="500" y="-14" style="font-size:7px;fill:#888;text-anchor:middle">kitchen slider</text>
+    <text x="320" y="-14" style="font-size:7px;fill:#888;text-anchor:middle">sink window</text>
+    <text x="598" y="220" style="font-size:7px;fill:#888;text-anchor:start">← bedrooms</text>
+
+  </g>
+</svg>
+</div>
+
+
+<!-- ===================== WALL ELEVATIONS ===================== -->
+
+<h2>Elevation A — Kitchen Cabinet Wall (32')</h2>
+<p class="note">View facing kitchen. Low ceiling 7'3" (87"). L = deck end, R = passage end. Maple cabinets 29" deep, window over sink, sliding door at right.</p>
+
+<div class="plan-wrap">
+<svg width="700" height="200" viewBox="0 0 700 200">
+  <g transform="translate(50, 20)">
+    <!-- 576px × 130.5px (32' × 7'3") -->
+    <rect x="0" y="0" width="576" height="130.5" fill="#f5f0e8" stroke="#222" stroke-width="2"/>
+
+    <!-- Upper cabs: y=22.5 to 76.5. Lower cabs/counter: y=76.5 to 130.5 -->
+    <rect x="162" y="76.5" width="80" height="54" fill="#e8dcc0" stroke="#b0a080" stroke-width="1"/>
+    <rect x="162" y="22.5" width="80" height="54" fill="#e8dcc0" stroke="#b0a080" stroke-width="1"/>
+    <rect x="242" y="10" width="34" height="120.5" fill="#ccc" stroke="#999" stroke-width="1"/>
+    <text x="259" y="70" style="font-size:7px;fill:#666;text-anchor:middle">FRIDGE</text>
+
+    <rect x="279" y="22.5" width="82.5" height="63" fill="#c8ddf0" stroke="#4a90d9" stroke-width="1.5"/>
+    <text x="320" y="58" style="font-size:7px;fill:#4a7ab0;text-anchor:middle">WINDOW</text>
+    <rect x="279" y="76.5" width="82.5" height="54" fill="#d8ccb0" stroke="#b0a080" stroke-width="1"/>
+
+    <rect x="364.5" y="76.5" width="67.5" height="54" fill="#e8dcc0" stroke="#b0a080" stroke-width="1"/>
+    <rect x="364.5" y="22.5" width="67.5" height="54" fill="#e8dcc0" stroke="#b0a080" stroke-width="1"/>
+    <rect x="378" y="28" width="40" height="24" fill="#bbb" stroke="#999" stroke-width="0.5"/>
+    <text x="398" y="44" style="font-size:6px;fill:#666;text-anchor:middle">MICRO</text>
+    <rect x="378" y="56" width="40" height="32" fill="#bbb" stroke="#999" stroke-width="0.5"/>
+    <text x="398" y="76" style="font-size:6px;fill:#666;text-anchor:middle">OVEN</text>
+
+    <rect x="444" y="0" width="112.5" height="130.5" fill="#f0e8e0" stroke="#d94a4a" stroke-width="1.5"/>
+    <line x1="500" y1="0" x2="500" y2="130.5" stroke="#d94a4a" stroke-width="1"/>
+    <text x="500" y="68" style="font-size:8px;fill:#b04040;text-anchor:middle">SLIDING DOOR</text>
+
+    <text x="81" y="68" style="font-size:8px;fill:#888;text-anchor:middle">(buffet wall 9')</text>
+
+    <line x1="-20" y1="0" x2="-20" y2="130.5" stroke="#999" stroke-width="0.75" marker-start="url(#ar)" marker-end="url(#a)"/>
+    <text x="-28" y="68" style="font-size:8px;fill:#666;text-anchor:end" transform="rotate(-90,-28,68)">7'3"</text>
+    <line x1="0" y1="148" x2="576" y2="148" stroke="#999" stroke-width="0.75" marker-start="url(#ar)" marker-end="url(#a)"/>
+    <text x="288" y="161" style="font-size:9px;fill:#666;text-anchor:middle">32'</text>
+  </g>
+</svg>
+</div>
+
+<h2>Elevation B — TV Wall (32')</h2>
+<p class="note">View facing TV wall from inside. High ceiling 9'7" (115"). L = passage end. R = piano/deck end.<br>
+L to R: 42" stair opening (wall above), 41" front door, 55" wall (TV), 4×52" windows (2" gaps), 32" wall.</p>
+
+<div class="plan-wrap">
+<svg width="700" height="230" viewBox="0 0 700 230">
+  <g transform="translate(50, 20)">
+    <!-- 576px × 172.5px (32' × 9'7") -->
+    <rect x="0" y="0" width="576" height="172.5" fill="#f5f0e8" stroke="#222" stroke-width="2"/>
+
+    <!-- 1. Stair opening: x=0 to 63 (42"). Hole in floor only, solid wall above. -->
+    <!-- Floor opening: roughly bottom 42" of wall = 63px. Railing at ~36" = 54px from floor -->
+    <rect x="0" y="118.5" width="63" height="54" fill="#f0ece4" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/>
+    <line x1="0" y1="118.5" x2="63" y2="118.5" stroke="#666" stroke-width="1.5"/>
+    <text x="31" y="142" style="font-size:6px;fill:#888;text-anchor:middle">STAIR</text>
+    <text x="31" y="150" style="font-size:6px;fill:#888;text-anchor:middle">OPENING</text>
+    <!-- Wall above stair opening -->
+    <text x="31" y="60" style="font-size:6px;fill:#888;text-anchor:middle">wall</text>
+
+    <!-- 2. Front door: x=63 to 124.5 (41"). Full-height door opening -->
+    <rect x="63" y="0" width="61.5" height="172.5" fill="#f0d8d0" stroke="#d94a4a" stroke-width="1.5"/>
+    <text x="93.75" y="80" style="font-size:7px;fill:#b04040;text-anchor:middle">FRONT</text>
+    <text x="93.75" y="92" style="font-size:7px;fill:#b04040;text-anchor:middle">DOOR</text>
+    <text x="93.75" y="104" style="font-size:6px;fill:#b04040;text-anchor:middle">41"</text>
+
+    <!-- 3. Wall with TV: x=124.5 to 207 (55" = 82.5px) -->
+    <rect x="141" y="52" width="44" height="28" fill="#333" stroke="#222" stroke-width="1" rx="2"/>
+    <text x="163" y="70" style="font-size:6px;fill:#888;text-anchor:middle">TV</text>
+
+    <!-- 4. Four windows: start at x=207 -->
+    <!-- Each 52"=78px, gap 2"=3px -->
+    <!-- Win1: 207 to 285 -->
+    <rect x="207" y="49.5" width="78" height="78" fill="#c8ddf0" stroke="#4a90d9" stroke-width="1.5"/>
+    <!-- Win2: 288 to 366 -->
+    <rect x="288" y="49.5" width="78" height="78" fill="#c8ddf0" stroke="#4a90d9" stroke-width="1.5"/>
+    <!-- Win3: 369 to 447 -->
+    <rect x="369" y="49.5" width="78" height="78" fill="#c8ddf0" stroke="#4a90d9" stroke-width="1.5"/>
+    <!-- Win4: 450 to 528 -->
+    <rect x="450" y="49.5" width="78" height="78" fill="#c8ddf0" stroke="#4a90d9" stroke-width="1.5"/>
+    <text x="367" y="93" style="font-size:7px;fill:#4a7ab0;text-anchor:middle">52"×52" WINDOWS (×4)</text>
+
+    <!-- 5. Piano wall: x=528 to 576 (32" = 48px) -->
+    <text x="552" y="155" style="font-size:7px;fill:#aaa;text-anchor:middle">(piano)</text>
+
+    <!-- Dimension labels for sections -->
+    <text x="31" y="170" style="font-size:6px;fill:#666;text-anchor:middle">42"</text>
+    <text x="165" y="170" style="font-size:6px;fill:#666;text-anchor:middle">55"</text>
+    <text x="552" y="170" style="font-size:6px;fill:#666;text-anchor:middle">32"</text>
+
+    <line x1="-20" y1="0" x2="-20" y2="172.5" stroke="#999" stroke-width="0.75" marker-start="url(#ar)" marker-end="url(#a)"/>
+    <text x="-28" y="90" style="font-size:8px;fill:#666;text-anchor:end" transform="rotate(-90,-28,90)">9'7"</text>
+    <line x1="0" y1="190" x2="576" y2="190" stroke="#999" stroke-width="0.75" marker-start="url(#ar)" marker-end="url(#a)"/>
+    <text x="288" y="203" style="font-size:9px;fill:#666;text-anchor:middle">32'</text>
+    <text x="31" y="-6" style="font-size:7px;fill:#888;text-anchor:middle">passage end</text>
+    <text x="552" y="-6" style="font-size:7px;fill:#888;text-anchor:middle">piano end</text>
+  </g>
+</svg>
+</div>
+
+<h2>Elevation C — Bedroom Passage Wall (26')</h2>
+<p class="note">View facing passage wall. Ceiling: 7'3" at left (kitchen end) rising to 9'7" at right (TV end). Art wall, passage opening, stair railing.</p>
+
+<div class="plan-wrap">
+<svg width="620" height="230" viewBox="0 0 620 230">
+  <g transform="translate(50, 20)">
+    <!-- 468px wide (26') -->
+    <!-- L=kitchen (low 7'3"=130.5px ceiling at y=42), R=TV (high 9'7"=172.5px ceiling at y=0) -->
+    <polygon points="0,42 468,0 468,172.5 0,172.5" fill="#f5f0e8" stroke="#222" stroke-width="2"/>
+
+    <!-- Art wall: left portion (kitchen end) -->
+    <!-- Passage at 130"=195px from left (kitchen end) -->
+    <text x="97" y="110" style="font-size:8px;fill:#888;text-anchor:middle">(art wall)</text>
+
+    <!-- Passage opening: x=195 to 243 (32"=48px) -->
+    <!-- Door height ~80"=120px from floor → y = 172.5-120 = 52.5 to 172.5 -->
+    <rect x="195" y="52.5" width="48" height="120" fill="#f0d8d0" stroke="#d94a4a" stroke-width="1.5"/>
+    <text x="219" y="118" style="font-size:7px;fill:#b04040;text-anchor:middle">PASSAGE</text>
+    <text x="219" y="128" style="font-size:7px;fill:#b04040;text-anchor:middle">to bedrooms</text>
+
+    <!-- Stair railing: x=243 to 468 (right/TV end) -->
+    <line x1="243" y1="130" x2="468" y2="130" stroke="#666" stroke-width="1.5" stroke-dasharray="6,4"/>
+    <text x="355" y="148" style="font-size:7px;fill:#888;text-anchor:middle">stair railing</text>
+    <text x="355" y="158" style="font-size:7px;fill:#888;text-anchor:middle">(stairs below)</text>
+
+    <line x1="-20" y1="42" x2="-20" y2="172.5" stroke="#999" stroke-width="0.75" marker-start="url(#ar)" marker-end="url(#a)"/>
+    <text x="-28" y="110" style="font-size:8px;fill:#666;text-anchor:end" transform="rotate(-90,-28,110)">7'3"</text>
+    <line x1="482" y1="0" x2="482" y2="172.5" stroke="#999" stroke-width="0.75" marker-start="url(#ar)" marker-end="url(#a)"/>
+    <text x="494" y="90" style="font-size:8px;fill:#666;text-anchor:start">9'7"</text>
+    <line x1="0" y1="190" x2="468" y2="190" stroke="#999" stroke-width="0.75" marker-start="url(#ar)" marker-end="url(#a)"/>
+    <text x="234" y="203" style="font-size:9px;fill:#666;text-anchor:middle">26'</text>
+    <text x="20" y="35" style="font-size:7px;fill:#888;text-anchor:start">kitchen (low)</text>
+    <text x="448" y="-6" style="font-size:7px;fill:#888;text-anchor:end">TV (high)</text>
+  </g>
+</svg>
+</div>
+
+<h2>Elevation D — Deck / Piano Window Wall (26')</h2>
+<p class="note">View facing deck. Ceiling: 9'7" at left (TV/piano end) sloping down to 7'3" at right (kitchen end). Two tall windows flank sliding door.</p>
+
+<div class="plan-wrap">
+<svg width="620" height="230" viewBox="0 0 620 230">
+  <g transform="translate(50, 20)">
+    <!-- 468px wide (26') -->
+    <!-- L=TV/piano (high 9'7" at y=0), R=kitchen (low 7'3" at y=42) -->
+    <polygon points="0,0 468,42 468,172.5 0,172.5" fill="#f5f0e8" stroke="#222" stroke-width="2"/>
+
+    <!-- From L (TV/piano end): 38"=57px wall, 76"=114px win, 4"=6px, 74"=111px slider, 4"=6px, 76"=114px win, 38"=57px wall -->
+
+    <text x="28" y="155" style="font-size:7px;fill:#aaa;text-anchor:middle">(piano)</text>
+
+    <!-- Window near piano: x=57 to 171, nearly full height -->
+    <rect x="57" y="10" width="114" height="144.5" fill="#c8ddf0" stroke="#4a90d9" stroke-width="1.5"/>
+    <line x1="114" y1="10" x2="114" y2="154.5" stroke="#4a90d9" stroke-width="0.5"/>
+
+    <!-- Slider: x=177 to 288 -->
+    <rect x="177" y="14" width="111" height="158.5" fill="#e8f0f0" stroke="#4a90d9" stroke-width="1.5"/>
+    <line x1="232" y1="14" x2="232" y2="172.5" stroke="#4a90d9" stroke-width="1"/>
+    <text x="232" y="100" style="font-size:8px;fill:#4a7ab0;text-anchor:middle">SLIDING DOOR</text>
+    <text x="232" y="112" style="font-size:7px;fill:#4a7ab0;text-anchor:middle">to deck</text>
+
+    <!-- Window near kitchen: x=294 to 408 -->
+    <rect x="294" y="28" width="114" height="126.5" fill="#c8ddf0" stroke="#4a90d9" stroke-width="1.5"/>
+    <line x1="351" y1="28" x2="351" y2="154.5" stroke="#4a90d9" stroke-width="0.5"/>
+
+    <text x="445" y="100" style="font-size:7px;fill:#888;text-anchor:middle">wall</text>
+
+    <line x1="-20" y1="0" x2="-20" y2="172.5" stroke="#999" stroke-width="0.75" marker-start="url(#ar)" marker-end="url(#a)"/>
+    <text x="-28" y="90" style="font-size:8px;fill:#666;text-anchor:end" transform="rotate(-90,-28,90)">9'7"</text>
+    <line x1="482" y1="42" x2="482" y2="172.5" stroke="#999" stroke-width="0.75" marker-start="url(#ar)" marker-end="url(#a)"/>
+    <text x="494" y="110" style="font-size:8px;fill:#666;text-anchor:start">7'3"</text>
+    <line x1="0" y1="190" x2="468" y2="190" stroke="#999" stroke-width="0.75" marker-start="url(#ar)" marker-end="url(#a)"/>
+    <text x="234" y="203" style="font-size:9px;fill:#666;text-anchor:middle">26'</text>
+    <text x="20" y="-6" style="font-size:7px;fill:#888;text-anchor:start">piano (high)</text>
+    <text x="448" y="35" style="font-size:7px;fill:#888;text-anchor:end">kitchen (low)</text>
+  </g>
+</svg>
+</div>
+
+
+<!-- ===================== CROSS-SECTION ELEVATIONS ===================== -->
+
+<h2>Cross-Section A–A — Through Fireplace (looking toward deck)</h2>
+<p class="note">
+  Cut through room at the fireplace, looking toward deck wall. Spans 26' from kitchen wall (left) to TV wall (right).<br>
+  Shows shed ceiling slope, fireplace stone mass in section, and spatial zones.
+</p>
+
+<div class="plan-wrap">
+<svg width="620" height="260" viewBox="0 0 620 260">
+  <g transform="translate(50, 30)">
+    <!-- Section spans 26' (312"=468px) from kitchen (left) to TV (right) -->
+    <!-- Ceiling: 7'3"=130.5px height at left → y=172.5-130.5=42 -->
+    <!-- 9'7"=172.5px height at right → y=0 -->
+    <!-- Floor at y=172.5 -->
+
+    <!-- Room outline -->
+    <polygon points="0,42 468,0 468,172.5 0,172.5" fill="#f8f6f2" stroke="#222" stroke-width="2"/>
+
+    <!-- Walls in section -->
+    <rect x="-8" y="42" width="8" height="130.5" fill="#222"/>
+    <rect x="468" y="0" width="8" height="172.5" fill="#222"/>
+
+    <!-- Floor -->
+    <line x1="-8" y1="172.5" x2="476" y2="172.5" stroke="#222" stroke-width="3"/>
+
+    <!-- Ceiling beams (decorative, running across slope) -->
+    <line x1="50" y1="40" x2="50" y2="36" stroke="#b08860" stroke-width="3"/>
+    <line x1="120" y1="35" x2="120" y2="31" stroke="#b08860" stroke-width="3"/>
+    <line x1="190" y1="29" x2="190" y2="25" stroke="#b08860" stroke-width="3"/>
+    <line x1="260" y1="23" x2="260" y2="19" stroke="#b08860" stroke-width="3"/>
+    <line x1="330" y1="17" x2="330" y2="13" stroke="#b08860" stroke-width="3"/>
+    <line x1="400" y1="11" x2="400" y2="7" stroke="#b08860" stroke-width="3"/>
+
+    <!-- Kitchen cabinets on left wall (in section view: small profile) -->
+    <!-- Upper cabs: ~15" from ceiling, 36" tall -->
+    <!-- At left wall ceiling y=42. Upper top y=42+22.5=64.5, bottom y=118.5 -->
+    <rect x="0" y="64.5" width="18" height="54" fill="#e8dcc0" stroke="#b0a080" stroke-width="1"/>
+    <rect x="0" y="118.5" width="28" height="54" fill="#e8dcc0" stroke="#b0a080" stroke-width="1"/>
+    <text x="14" y="100" style="font-size:6px;fill:#666;text-anchor:middle" transform="rotate(-90,14,100)">cabs</text>
+
+    <!-- Island in section (at cut line, near apex, ~34" deep) -->
+    <!-- Inner edge at 83" from kitchen = 124.5px. Counter height 36"=54px from floor → y=118.5 to 172.5 -->
+    <rect x="124.5" y="118.5" width="51" height="54" fill="#e0dcd4" stroke="#666" stroke-width="1.5"/>
+    <text x="150" y="150" style="font-size:7px;fill:#666;text-anchor:middle">island</text>
+
+    <!-- Passage between cabs and island -->
+    <line x1="28" y1="164" x2="124.5" y2="164" stroke="#999" stroke-width="0.5" marker-start="url(#ar)" marker-end="url(#a)"/>
+    <text x="76" y="161" style="font-size:6px;fill:#888;text-anchor:middle">54"</text>
+
+    <!-- Fireplace in section — we're cutting through the stone mass -->
+    <!-- In plan, fireplace y=240 to 360. From kitchen (top/left in plan): -->
+    <!-- Kitchen wall is y=0 in plan, TV is y=468 in plan -->
+    <!-- In this section, x=0 is kitchen, x=468 is TV -->
+    <!-- Fireplace: from kitchen = 240px in plan = x=240 in section, to 360px = x=360 -->
+    <!-- Stone mass: 41" deep in the direction we're LOOKING (toward deck) -->
+    <!-- We see the side face: 80" wide shown as x=240 to x=360 (120px=80") -->
+    <!-- Height: goes from floor up to... presumably close to ceiling -->
+
+    <rect x="240" y="16" width="120" height="156.5" fill="#c8b8a0" stroke="#666" stroke-width="2"/>
+    <text x="300" y="90" style="font-size:9px;fill:#555;text-anchor:middle">FIREPLACE</text>
+    <text x="300" y="102" style="font-size:7px;fill:#777;text-anchor:middle">stone mass</text>
+    <text x="300" y="114" style="font-size:7px;fill:#777;text-anchor:middle">(80" wide × 41" deep)</text>
+
+    <!-- Hearth shelf profile on this side (we're looking toward the opening side) -->
+    <!-- Hearth is 16" extending toward us, shown as a ledge at ~18" high from floor -->
+    <rect x="240" y="145.5" width="120" height="6" fill="#d4c4a8" stroke="#888" stroke-width="0.5"/>
+    <text x="240" y="142" style="font-size:6px;fill:#888;text-anchor:middle">hearth</text>
+
+    <!-- Stair opening at right (TV) end -->
+    <!-- Stair is 12.5'=150"=225px from TV wall. In section from right: x=468-225=243 to 468 -->
+    <!-- But the stair is along the passage wall (INTO the page from our view) -->
+    <!-- We wouldn't see it in this section unless the cut crosses it -->
+    <!-- Actually at cut A-A (x≈410 in plan), we're at the fireplace which is between the stairs and the island -->
+    <!-- The stair opening starts at x=513 in plan, our cut is at x=410, so stairs are BEHIND the cut plane -->
+    <!-- We might see the railing as a dashed line since it's behind us -->
+
+    <!-- 6' passage label: fireplace to TV wall -->
+    <line x1="360" y1="180" x2="468" y2="180" stroke="#999" stroke-width="0.75" marker-start="url(#ar)" marker-end="url(#a)"/>
+    <text x="414" y="192" style="font-size:7px;fill:#666;text-anchor:middle">6' to TV wall</text>
+
+    <!-- Zone labels -->
+    <text x="76" y="80" style="font-size:8px;fill:#888;text-anchor:middle">KITCHEN</text>
+    <text x="190" y="80" style="font-size:8px;fill:#888;text-anchor:middle">LIVING</text>
+    <text x="414" y="80" style="font-size:8px;fill:#888;text-anchor:middle">PASSAGE</text>
+
+    <!-- Dimensions -->
+    <line x1="0" y1="200" x2="468" y2="200" stroke="#999" stroke-width="0.75" marker-start="url(#ar)" marker-end="url(#a)"/>
+    <text x="234" y="213" style="font-size:9px;fill:#666;text-anchor:middle">26'</text>
+    <line x1="-20" y1="42" x2="-20" y2="172.5" stroke="#999" stroke-width="0.75" marker-start="url(#ar)" marker-end="url(#a)"/>
+    <text x="-28" y="110" style="font-size:7px;fill:#666;text-anchor:end">7'3"</text>
+    <line x1="482" y1="0" x2="482" y2="172.5" stroke="#999" stroke-width="0.75" marker-start="url(#ar)" marker-end="url(#a)"/>
+    <text x="494" y="90" style="font-size:7px;fill:#666;text-anchor:start">9'7"</text>
+
+    <text x="0" y="-10" style="font-size:7px;fill:#888">← kitchen wall</text>
+    <text x="468" y="-10" style="font-size:7px;fill:#888;text-anchor:end">TV wall →</text>
+  </g>
+</svg>
+</div>
+
+<h2>Cross-Section B–B — Through Island (looking toward deck)</h2>
+<p class="note">
+  Cut through room at the island, looking toward deck wall. Shows kitchen cabinets, 54" passageway, island counter, and open living space beyond.
+</p>
+
+<div class="plan-wrap">
+<svg width="620" height="260" viewBox="0 0 620 260">
+  <g transform="translate(50, 30)">
+    <!-- Same room section as A-A but at a different cut position -->
+    <polygon points="0,42 468,0 468,172.5 0,172.5" fill="#f8f6f2" stroke="#222" stroke-width="2"/>
+    <rect x="-8" y="42" width="8" height="130.5" fill="#222"/>
+    <rect x="468" y="0" width="8" height="172.5" fill="#222"/>
+    <line x1="-8" y1="172.5" x2="476" y2="172.5" stroke="#222" stroke-width="3"/>
+
+    <!-- Beams -->
+    <line x1="50" y1="40" x2="50" y2="36" stroke="#b08860" stroke-width="3"/>
+    <line x1="120" y1="35" x2="120" y2="31" stroke="#b08860" stroke-width="3"/>
+    <line x1="190" y1="29" x2="190" y2="25" stroke="#b08860" stroke-width="3"/>
+    <line x1="260" y1="23" x2="260" y2="19" stroke="#b08860" stroke-width="3"/>
+    <line x1="330" y1="17" x2="330" y2="13" stroke="#b08860" stroke-width="3"/>
+    <line x1="400" y1="11" x2="400" y2="7" stroke="#b08860" stroke-width="3"/>
+
+    <!-- Kitchen cabinets on left wall -->
+    <rect x="0" y="64.5" width="18" height="54" fill="#e8dcc0" stroke="#b0a080" stroke-width="1"/>
+    <rect x="0" y="118.5" width="43.5" height="54" fill="#e8dcc0" stroke="#b0a080" stroke-width="1"/>
+    <text x="22" y="150" style="font-size:7px;fill:#666;text-anchor:middle">cabs</text>
+    <text x="22" y="160" style="font-size:6px;fill:#888;text-anchor:middle">29"</text>
+
+    <!-- 54" passageway -->
+    <line x1="43.5" y1="164" x2="124.5" y2="164" stroke="#999" stroke-width="0.5" marker-start="url(#ar)" marker-end="url(#a)"/>
+    <text x="84" y="161" style="font-size:7px;fill:#666;text-anchor:middle">54" passage</text>
+
+    <!-- Island counter in section -->
+    <!-- At cut B-B (x≈270 in plan), the island is near its widest curve -->
+    <!-- Inner edge at y=124.5px from top in plan = 124.5px from kitchen wall in section = x=124.5 -->
+    <!-- At this point the island is about 34" deep (near apex) = 51px -->
+    <!-- Counter height 36" from floor → y=118.5 to 172.5 -->
+    <rect x="124.5" y="118.5" width="51" height="54" fill="#e0dcd4" stroke="#666" stroke-width="1.5"/>
+    <text x="150" y="140" style="font-size:7px;fill:#666;text-anchor:middle">island</text>
+    <text x="150" y="150" style="font-size:6px;fill:#888;text-anchor:middle">counter</text>
+
+    <!-- Depth label: 9'9" from wall to apex -->
+    <line x1="0" y1="182" x2="175.5" y2="182" stroke="#999" stroke-width="0.75" marker-start="url(#ar)" marker-end="url(#a)"/>
+    <text x="87" y="194" style="font-size:7px;fill:#666;text-anchor:middle">9'9" (cabs + passage + island)</text>
+
+    <!-- Open living space beyond island -->
+    <text x="300" y="90" style="font-size:8px;fill:#888;text-anchor:middle">OPEN LIVING SPACE</text>
+
+    <!-- Fireplace visible in background (behind cut plane, shown as dashed outline) -->
+    <!-- At cut B-B (x=270 in plan), the fireplace is at x=379-441. It's behind the cut. -->
+    <!-- Looking toward deck from B-B, fireplace is behind us. So it would NOT be visible. -->
+    <!-- Instead we see the deck wall with windows in the background -->
+
+    <!-- Timber post (flanking island) — one of the two posts -->
+    <rect x="168" y="118.5" width="6" height="54" fill="#b08860" stroke="#8a6840" stroke-width="1"/>
+    <text x="171" y="115" style="font-size:6px;fill:#8a6840;text-anchor:middle">post</text>
+
+    <!-- Dimensions -->
+    <line x1="0" y1="206" x2="468" y2="206" stroke="#999" stroke-width="0.75" marker-start="url(#ar)" marker-end="url(#a)"/>
+    <text x="234" y="219" style="font-size:9px;fill:#666;text-anchor:middle">26'</text>
+    <line x1="-20" y1="42" x2="-20" y2="172.5" stroke="#999" stroke-width="0.75" marker-start="url(#ar)" marker-end="url(#a)"/>
+    <text x="-28" y="110" style="font-size:7px;fill:#666;text-anchor:end">7'3"</text>
+    <line x1="482" y1="0" x2="482" y2="172.5" stroke="#999" stroke-width="0.75" marker-start="url(#ar)" marker-end="url(#a)"/>
+    <text x="494" y="90" style="font-size:7px;fill:#666;text-anchor:start">9'7"</text>
+
+    <text x="0" y="-10" style="font-size:7px;fill:#888">← kitchen wall</text>
+    <text x="468" y="-10" style="font-size:7px;fill:#888;text-anchor:end">TV wall →</text>
+  </g>
+</svg>
+</div>
+
+
+<h2>Cross-Section C–C — From Fireplace Front, Looking Toward Deck</h2>
+<p class="note">
+  Standing at the fireplace opening, looking toward the deck/piano wall (~23' away). Spans 26' from kitchen end (left, low) to TV end (right, high).<br>
+  Shows hearth shelf in foreground, open living space, deck wall with windows/slider, and piano in far right corner.
+</p>
+
+<div class="plan-wrap">
+<svg width="620" height="260" viewBox="0 0 620 260">
+  <g transform="translate(50, 30)">
+    <!-- Section spans 26' (468px). L=kitchen (low 7'3"), R=TV (high 9'7") -->
+    <polygon points="0,42 468,0 468,172.5 0,172.5" fill="#f8f6f2" stroke="#222" stroke-width="2"/>
+    <line x1="-8" y1="172.5" x2="476" y2="172.5" stroke="#222" stroke-width="3"/>
+
+    <!-- Ceiling beams -->
+    <line x1="40" y1="40" x2="40" y2="36" stroke="#b08860" stroke-width="3"/>
+    <line x1="100" y1="36" x2="100" y2="32" stroke="#b08860" stroke-width="3"/>
+    <line x1="160" y1="31" x2="160" y2="27" stroke="#b08860" stroke-width="3"/>
+    <line x1="220" y1="26" x2="220" y2="22" stroke="#b08860" stroke-width="3"/>
+    <line x1="280" y1="21" x2="280" y2="17" stroke="#b08860" stroke-width="3"/>
+    <line x1="340" y1="16" x2="340" y2="12" stroke="#b08860" stroke-width="3"/>
+    <line x1="400" y1="11" x2="400" y2="7" stroke="#b08860" stroke-width="3"/>
+    <line x1="460" y1="6" x2="460" y2="2" stroke="#b08860" stroke-width="3"/>
+
+    <!-- BACKGROUND: Deck wall with openings (26') -->
+    <!-- From L (kitchen): wall, 76" window, 4", 74" slider, 4", 76" window, wall -->
+    <rect x="10" y="45" width="448" height="124" fill="none" stroke="#bbb" stroke-width="0.75"/>
+    <!-- Window near kitchen: x≈65 to 179 -->
+    <rect x="65" y="50" width="114" height="106" fill="#d8eaf8" stroke="#4a90d9" stroke-width="0.75" opacity="0.5"/>
+    <line x1="122" y1="50" x2="122" y2="156" stroke="#4a90d9" stroke-width="0.5" opacity="0.4"/>
+    <!-- Slider: x≈185 to 296 -->
+    <rect x="185" y="50" width="111" height="120" fill="#dae8ee" stroke="#4a90d9" stroke-width="0.75" opacity="0.5"/>
+    <line x1="240" y1="50" x2="240" y2="170" stroke="#4a90d9" stroke-width="0.5" opacity="0.4"/>
+    <text x="240" y="112" style="font-size:7px;fill:#8aabb8;text-anchor:middle">deck slider</text>
+    <!-- Window near piano: x≈302 to 416 -->
+    <rect x="302" y="44" width="114" height="116" fill="#d8eaf8" stroke="#4a90d9" stroke-width="0.75" opacity="0.5"/>
+    <line x1="359" y1="44" x2="359" y2="156" stroke="#4a90d9" stroke-width="0.5" opacity="0.4"/>
+
+    <!-- Mountain silhouette through windows -->
+    <path d="M 70 80 L 100 58 L 130 72 L 155 52 L 175 76" fill="none" stroke="#b8c8b0" stroke-width="0.5" opacity="0.3"/>
+    <path d="M 310 70 L 345 48 L 375 62 L 400 42 L 412 64" fill="none" stroke="#b8c8b0" stroke-width="0.5" opacity="0.3"/>
+
+    <!-- FOREGROUND: Hearth shelf -->
+    <!-- Fireplace y=240 to 360 in plan → x=240 to 360 in this section -->
+    <!-- Hearth: 16" deep, ~18" high from floor → y=172.5-27=145.5 to 172.5 -->
+    <rect x="240" y="145.5" width="120" height="27" fill="#d4c4a8" stroke="#888" stroke-width="1.5"/>
+    <text x="300" y="163" style="font-size:7px;fill:#666;text-anchor:middle">hearth shelf 16"</text>
+    <text x="300" y="138" style="font-size:6px;fill:#8B4513;text-anchor:middle">← fireplace behind viewer →</text>
+
+    <!-- Piano in far right corner -->
+    <path d="M 402 172.5 L 402 142 Q 430 140 445 152 L 445 172.5 Z"
+          fill="none" stroke="#aaa" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="423" y="160" style="font-size:6px;fill:#aaa;text-anchor:middle">piano</text>
+
+    <!-- Zone labels -->
+    <text x="100" y="170" style="font-size:7px;fill:#888;text-anchor:middle">dining zone</text>
+    <text x="380" y="170" style="font-size:7px;fill:#888;text-anchor:middle">living / piano</text>
+    <text x="234" y="182" style="font-size:7px;fill:#666;text-anchor:middle">~23' open to deck wall</text>
+
+    <!-- Dimensions -->
+    <line x1="0" y1="198" x2="468" y2="198" stroke="#999" stroke-width="0.75" marker-start="url(#ar)" marker-end="url(#a)"/>
+    <text x="234" y="211" style="font-size:9px;fill:#666;text-anchor:middle">26'</text>
+    <line x1="-20" y1="42" x2="-20" y2="172.5" stroke="#999" stroke-width="0.75" marker-start="url(#ar)" marker-end="url(#a)"/>
+    <text x="-28" y="110" style="font-size:7px;fill:#666;text-anchor:end">7'3"</text>
+    <line x1="482" y1="0" x2="482" y2="172.5" stroke="#999" stroke-width="0.75" marker-start="url(#ar)" marker-end="url(#a)"/>
+    <text x="494" y="90" style="font-size:7px;fill:#666;text-anchor:start">9'7"</text>
+    <text x="0" y="-10" style="font-size:7px;fill:#888">kitchen end (low)</text>
+    <text x="468" y="-10" style="font-size:7px;fill:#888;text-anchor:end">TV end (high)</text>
+  </g>
+</svg>
+</div>
+
+<h2>Cross-Section D–D — From Passage, Looking Toward Deck (Full Room Depth)</h2>
+<p class="note">
+  Standing at the bedroom passage wall, looking across the full 32' to the deck wall. Width = 26' (kitchen left, TV right).<br>
+  Shows layered depth: stair railing (foreground) → back of fireplace (7'6") → island (~20') → cabinets → deck wall (32').
+</p>
+
+<div class="plan-wrap">
+<svg width="620" height="280" viewBox="0 0 620 280">
+  <g transform="translate(50, 30)">
+    <!-- Section spans 26' (468px). L=kitchen (low), R=TV (high) -->
+    <polygon points="0,42 468,0 468,172.5 0,172.5" fill="#f8f6f2" stroke="#222" stroke-width="2"/>
+    <line x1="-8" y1="172.5" x2="476" y2="172.5" stroke="#222" stroke-width="3"/>
+
+    <!-- Ceiling beams -->
+    <line x1="40" y1="40" x2="40" y2="36" stroke="#b08860" stroke-width="3"/>
+    <line x1="100" y1="36" x2="100" y2="32" stroke="#b08860" stroke-width="3"/>
+    <line x1="160" y1="31" x2="160" y2="27" stroke="#b08860" stroke-width="3"/>
+    <line x1="220" y1="26" x2="220" y2="22" stroke="#b08860" stroke-width="3"/>
+    <line x1="280" y1="21" x2="280" y2="17" stroke="#b08860" stroke-width="3"/>
+    <line x1="340" y1="16" x2="340" y2="12" stroke="#b08860" stroke-width="3"/>
+    <line x1="400" y1="11" x2="400" y2="7" stroke="#b08860" stroke-width="3"/>
+    <line x1="460" y1="6" x2="460" y2="2" stroke="#b08860" stroke-width="3"/>
+
+    <!-- LAYER 1 (FAR BACKGROUND, 32' away): Deck wall — faint outlines -->
+    <rect x="14" y="46" width="440" height="122" fill="none" stroke="#ddd" stroke-width="0.5"/>
+    <rect x="69" y="50" width="114" height="104" fill="#e8f0f8" stroke="#c8dce8" stroke-width="0.5" opacity="0.3"/>
+    <rect x="189" y="50" width="111" height="118" fill="#e8f0f8" stroke="#c8dce8" stroke-width="0.5" opacity="0.3"/>
+    <rect x="306" y="46" width="114" height="112" fill="#e8f0f8" stroke="#c8dce8" stroke-width="0.5" opacity="0.3"/>
+    <text x="234" y="108" style="font-size:6px;fill:#c0c0c0;text-anchor:middle">deck wall 32' away</text>
+
+    <!-- LAYER 2 (~25' away): Kitchen cabinets along kitchen wall (left edge) -->
+    <rect x="0" y="66" width="12" height="50" fill="#e8dcc0" stroke="#c0b090" stroke-width="0.5" opacity="0.5"/>
+    <rect x="0" y="120" width="18" height="52.5" fill="#e8dcc0" stroke="#c0b090" stroke-width="0.5" opacity="0.5"/>
+
+    <!-- LAYER 3 (~20' away): Kitchen island — curved back face -->
+    <!-- Island spans y=0 to ~175 in plan → x=0 to ~175 in this section (kitchen side) -->
+    <path d="M 18 120 L 18 172.5 L 224 172.5 L 224 144 Q 180 130 130 126 Q 70 122 18 120 Z"
+          fill="#e0dcd4" stroke="#888" stroke-width="1" opacity="0.6"/>
+    <text x="120" y="156" style="font-size:7px;fill:#888;text-anchor:middle">island (~20' away)</text>
+
+    <!-- Timber posts -->
+    <rect x="14" y="120" width="4" height="52.5" fill="#b08860" stroke="#8a6840" stroke-width="0.5" opacity="0.5"/>
+    <rect x="224" y="120" width="4" height="52.5" fill="#b08860" stroke="#8a6840" stroke-width="0.5" opacity="0.5"/>
+
+    <!-- LAYER 4 (7'6" away): BACK OF FIREPLACE — prominent -->
+    <!-- Fireplace y=240 to 360 in plan → x=240 to 360 in this section -->
+    <rect x="240" y="16" width="120" height="156.5" fill="#c8b8a0" stroke="#666" stroke-width="2"/>
+    <text x="300" y="78" style="font-size:10px;fill:#555;text-anchor:middle">FIREPLACE</text>
+    <text x="300" y="93" style="font-size:8px;fill:#777;text-anchor:middle">back face</text>
+    <text x="300" y="107" style="font-size:7px;fill:#999;text-anchor:middle">80" wide × 41" deep</text>
+    <text x="300" y="120" style="font-size:7px;fill:#999;text-anchor:middle">7'6" from viewer</text>
+
+    <!-- LAYER 5 (FOREGROUND): Stair railing and passage opening -->
+    <!-- Passage opening: y=195 to 243 in plan → x=195 to 243 in section -->
+    <rect x="195" y="54" width="48" height="118.5" fill="none" stroke="#222" stroke-width="2.5"/>
+    <text x="219" y="116" style="font-size:7px;fill:#333;text-anchor:middle">passage</text>
+    <text x="219" y="126" style="font-size:7px;fill:#333;text-anchor:middle">opening</text>
+
+    <!-- Stair railing: y=243 to 468 in plan → x=243 to 468 in section -->
+    <line x1="243" y1="126" x2="468" y2="126" stroke="#333" stroke-width="3"/>
+    <line x1="243" y1="126" x2="243" y2="172.5" stroke="#333" stroke-width="2.5"/>
+    <line x1="290" y1="126" x2="290" y2="168" stroke="#555" stroke-width="1.5"/>
+    <line x1="340" y1="126" x2="340" y2="168" stroke="#555" stroke-width="1.5"/>
+    <line x1="390" y1="126" x2="390" y2="168" stroke="#555" stroke-width="1.5"/>
+    <line x1="440" y1="126" x2="440" y2="168" stroke="#555" stroke-width="1.5"/>
+    <line x1="468" y1="126" x2="468" y2="172.5" stroke="#333" stroke-width="2.5"/>
+    <rect x="243" y="126" width="225" height="46.5" fill="#f0ece4" opacity="0.4"/>
+    <text x="355" y="150" style="font-size:7px;fill:#555;text-anchor:middle">stair railing (foreground)</text>
+    <text x="355" y="162" style="font-size:6px;fill:#888;text-anchor:middle">stairs descend below</text>
+
+    <!-- Art wall label -->
+    <text x="97" y="145" style="font-size:7px;fill:#888;text-anchor:middle">(art wall)</text>
+
+    <!-- Piano ghost in far right corner -->
+    <path d="M 412 172.5 L 412 150 Q 434 148 445 156 L 445 172.5 Z"
+          fill="none" stroke="#bbb" stroke-width="0.5" stroke-dasharray="3,2" opacity="0.4"/>
+    <text x="428" y="166" style="font-size:5px;fill:#ccc;text-anchor:middle">piano</text>
+
+    <!-- Depth legend -->
+    <text x="234" y="186" style="font-size:7px;fill:#666;text-anchor:middle">depth: railing → fireplace 7'6" → island ~20' → cabs ~25' → deck 32'</text>
+
+    <!-- Dimensions -->
+    <line x1="0" y1="206" x2="468" y2="206" stroke="#999" stroke-width="0.75" marker-start="url(#ar)" marker-end="url(#a)"/>
+    <text x="234" y="219" style="font-size:9px;fill:#666;text-anchor:middle">26'</text>
+    <line x1="-20" y1="42" x2="-20" y2="172.5" stroke="#999" stroke-width="0.75" marker-start="url(#ar)" marker-end="url(#a)"/>
+    <text x="-28" y="110" style="font-size:7px;fill:#666;text-anchor:end">7'3"</text>
+    <line x1="482" y1="0" x2="482" y2="172.5" stroke="#999" stroke-width="0.75" marker-start="url(#ar)" marker-end="url(#a)"/>
+    <text x="494" y="90" style="font-size:7px;fill:#666;text-anchor:start">9'7"</text>
+    <text x="0" y="-10" style="font-size:7px;fill:#888">kitchen end (low)</text>
+    <text x="468" y="-10" style="font-size:7px;fill:#888;text-anchor:end">TV end (high)</text>
+  </g>
+</svg>
+</div>
+
+
+<!-- ===================== MEASUREMENT SUMMARY ===================== -->
+<h2>Measurement Summary</h2>
+<p class="note" style="font-size:11px; line-height:1.9; max-width:640px;">
+<strong>Room:</strong> 32' × 26' (832 sq ft)<br>
+<strong>Kitchen cabinet wall:</strong> 32' long (low ceiling, 7'3")<br>
+<strong>TV wall (opposite):</strong> 32' long (high ceiling, 9'7")<br>
+<strong>Bedroom passage wall:</strong> 26' long<br>
+<strong>Deck/piano wall:</strong> 26' long<br>
+<strong>Shed ceiling:</strong> 7'3" (kitchen) → 9'7" (TV), slope runs across 26' depth<br><br>
+<strong>Fireplace (freestanding):</strong> 80" wide × 41" stone + 16" hearth shelf<br>
+&nbsp;&nbsp;Opening faces deck. Back face 7'6" from passage wall. Front 21' from deck wall (hearth within).<br>
+&nbsp;&nbsp;Nearest side 6' from TV wall.<br><br>
+<strong>Stair opening:</strong> 42" wide × ~12.5' long, along passage wall from TV wall corner<br>
+<strong>Island:</strong> 150" long, curved. 29" cabs + 54" passage + island. Apex 9'9" from cab wall.<br>
+&nbsp;&nbsp;31" straight stub at passage end, then curves to apex.<br>
+<strong>Piano:</strong> Steinway Model O (~5'11"), deck/TV wall corner<br>
+<strong>Cabinets:</strong> Maple, 29" deep
+</p>
+
+</body>
+</html>
