@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>215 Aspen · Exterior Color Palettes</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f5f0ec;
+  --text: #2a2421;
+  --muted: #8a7e78;
+  --rule: #d4cbc4;
+  /* beige cladding approx */
+  --cladding: #c8b89a;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'DM Sans',sans-serif; background:var(--bg); color:var(--text); }
+.page { max-width:900px; margin:0 auto; padding:40px 24px 80px; }
+h1 { font-family:'DM Serif Display',serif; font-size:2.2rem; margin-bottom:6px; }
+.subtitle { color:var(--muted); font-size:1rem; margin-bottom:40px; line-height:1.5; }
+
+/* fixed element */
+.fixed-element { margin-bottom:48px; }
+.fixed-element h2 { font-family:'DM Serif Display',serif; font-size:1.1rem; color:var(--muted); margin-bottom:16px; letter-spacing:0.03em; text-transform:uppercase; font-weight:400; }
+.cladding-strip { display:flex; align-items:center; gap:16px; padding:16px 20px; background:#fff; border-radius:12px; border:1px solid var(--rule); }
+.cladding-swatch { width:80px; height:60px; border-radius:8px; background:var(--cladding); border:1px solid rgba(0,0,0,0.08); flex-shrink:0; }
+.cladding-info { font-size:0.9rem; line-height:1.6; }
+.cladding-info strong { font-weight:600; }
+
+/* palette card */
+.palette { margin-bottom:56px; }
+.palette-header { display:flex; align-items:baseline; gap:12px; margin-bottom:6px; }
+.palette-num { font-family:'DM Serif Display',serif; font-size:3rem; color:var(--rule); line-height:1; }
+.palette-title { font-family:'DM Serif Display',serif; font-size:1.5rem; }
+.palette-vibe { color:var(--muted); font-size:0.9rem; margin-bottom:20px; font-style:italic; }
+.palette-desc { font-size:0.95rem; line-height:1.7; margin-bottom:24px; max-width:720px; }
+
+/* swatch row */
+.swatch-row { display:flex; gap:12px; margin-bottom:20px; flex-wrap:wrap; }
+.swatch-card { flex:1; min-width:140px; background:#fff; border-radius:12px; overflow:hidden; border:1px solid var(--rule); }
+.swatch-color { height:100px; position:relative; }
+.swatch-color .label { position:absolute; bottom:6px; left:8px; font-size:0.65rem; padding:2px 6px; border-radius:4px; background:rgba(255,255,255,0.85); color:#333; font-weight:500; }
+.swatch-info { padding:12px; }
+.swatch-name { font-weight:600; font-size:0.85rem; margin-bottom:2px; }
+.swatch-code { font-size:0.75rem; color:var(--muted); }
+.swatch-use { font-size:0.75rem; color:var(--muted); margin-top:4px; font-style:italic; }
+
+/* combined strip */
+.combo-strip { display:flex; height:60px; border-radius:10px; overflow:hidden; margin-bottom:12px; border:1px solid var(--rule); }
+.combo-strip > div { flex:1; position:relative; }
+.combo-strip .thin { flex:0.4; }
+.combo-strip .label-bottom { position:absolute; bottom:4px; left:6px; font-size:0.6rem; color:rgba(255,255,255,0.8); }
+.combo-strip .label-bottom.dark { color:rgba(0,0,0,0.5); }
+
+/* notes */
+.notes { font-size:0.85rem; color:var(--muted); line-height:1.6; padding-left:16px; border-left:3px solid var(--rule); margin-top:16px; }
+
+/* mountain context bar */
+.context-bar { display:flex; height:40px; border-radius:8px; overflow:hidden; margin-bottom:40px; border:1px solid var(--rule); }
+.context-bar > div { flex:1; display:flex; align-items:center; justify-content:center; font-size:0.65rem; font-weight:500; }
+
+/* hr */
+.divider { border:none; border-top:1px solid var(--rule); margin:48px 0; }
+
+/* smoothcoat note */
+.smoothcoat { background:#fff; border:1px solid var(--rule); border-radius:12px; padding:20px 24px; margin-bottom:48px; }
+.smoothcoat h3 { font-family:'DM Serif Display',serif; font-size:1.1rem; margin-bottom:8px; }
+.smoothcoat p { font-size:0.9rem; line-height:1.6; color:var(--muted); }
+
+/* responsive */
+@media(max-width:600px) {
+  .swatch-row { flex-direction:column; }
+  .swatch-card { min-width:100%; }
+  .palette-num { font-size:2rem; }
+  h1 { font-size:1.6rem; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<h1>215 Aspen Drive · Exterior Palettes</h1>
+<p class="subtitle">Three mauve-direction palettes for painted brick + smooth stucco, designed around the fixed beige window cladding. All colors Benjamin Moore.</p>
+
+<!-- context bar: mountain landscape -->
+<div style="margin-bottom:8px; font-size:0.75rem; color:var(--muted); font-weight:500;">How each palette sits in the landscape →</div>
+<div class="context-bar">
+  <div style="background:#8faabd;">Sky</div>
+  <div style="background:#a5b89a;">Aspens</div>
+  <div style="background:#7a8c6e;">Conifers</div>
+  <div style="background:#e8dfd4;">Snow</div>
+  <div style="background:var(--cladding); color:#5a4e3e;">Cladding</div>
+  <div style="background:#8a7565;">Wood Deck</div>
+</div>
+
+<!-- fixed element -->
+<div class="fixed-element">
+  <h2>Fixed Element · Beige Window &amp; Slider Cladding</h2>
+  <div class="cladding-strip">
+    <div class="cladding-swatch"></div>
+    <div class="cladding-info">
+      <strong>Warm beige aluminum cladding</strong> — all kitchen windows and sliders. Cannot be painted. Approximately matches BM Sandy Brown 2164-40 or SW Latte. Every palette must harmonize with this warm beige as the de facto trim color.
+    </div>
+  </div>
+</div>
+
+<!-- smooth coat note -->
+<div class="smoothcoat">
+  <h3>Integral Color in Smooth Coat</h3>
+  <p>If you smooth-coat the stucco, the body color can be mixed directly into the finish coat — no painting needed. This is more durable, won't peel, and reads as a true material rather than a painted surface. The brick would still need to be painted separately to match. Ask the stucco contractor about integral pigment in a smooth trowel finish (sometimes called "Santa Barbara" or "California" finish).</p>
+</div>
+
+<hr class="divider">
+
+<!-- ===== PALETTE 1 ===== -->
+<div class="palette">
+  <div class="palette-header">
+    <span class="palette-num">1</span>
+    <span class="palette-title">Warm Oyster · Taupe-Mauve</span>
+  </div>
+  <p class="palette-vibe">Quiet sophistication — "Is that grey or mauve?" The beige cladding blends in.</p>
+  <p class="palette-desc">The safest path. The mauve is barely there — more of a warm taupe with a rosy whisper. Against snow it reads warm and grounded; in summer among aspens it recedes elegantly. The beige cladding nearly disappears into the body color. This says "expensive taste" without saying anything loud.</p>
+
+  <div class="swatch-row">
+    <div class="swatch-card">
+      <div class="swatch-color" style="background:#8E7F79;">
+        <span class="label">Body</span>
+      </div>
+      <div class="swatch-info">
+        <div class="swatch-name">Smoked Oyster</div>
+        <div class="swatch-code">BM 2109-40 · LRV 22</div>
+        <div class="swatch-use">Brick + stucco · uniform body</div>
+      </div>
+    </div>
+    <div class="swatch-card">
+      <div class="swatch-color" style="background:#c8b89a;">
+        <span class="label">Fixed</span>
+      </div>
+      <div class="swatch-info">
+        <div class="swatch-name">Beige Cladding</div>
+        <div class="swatch-code">Existing · cannot change</div>
+        <div class="swatch-use">Windows + sliders</div>
+      </div>
+    </div>
+    <div class="swatch-card">
+      <div class="swatch-color" style="background:#4a4340;">
+        <span class="label">Accent</span>
+      </div>
+      <div class="swatch-info">
+        <div class="swatch-name">Espresso</div>
+        <div class="swatch-code">BM 2111-20 · LRV 5</div>
+        <div class="swatch-use">Front door · fascia · railings</div>
+      </div>
+    </div>
+    <div class="swatch-card">
+      <div class="swatch-color" style="background:#d4cbc1;">
+        <span class="label">Soffit</span>
+      </div>
+      <div class="swatch-info">
+        <div class="swatch-name">Balboa Mist</div>
+        <div class="swatch-code">BM OC-27 · LRV 67</div>
+        <div class="swatch-use">Soffits · garage door</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- combo strip -->
+  <div style="font-size:0.7rem; color:var(--muted); margin-bottom:6px;">How it reads together ↓</div>
+  <div class="combo-strip">
+    <div style="background:#d4cbc1;"><span class="label-bottom dark">Soffit</span></div>
+    <div style="background:#8E7F79;"><span class="label-bottom">Stucco body</span></div>
+    <div class="thin" style="background:#c8b89a;"><span class="label-bottom dark">Cladding</span></div>
+    <div style="background:#8E7F79;"><span class="label-bottom">Brick body</span></div>
+    <div class="thin" style="background:#4a4340;"><span class="label-bottom">Door</span></div>
+  </div>
+
+  <div class="notes">
+    <strong>Why it works:</strong> Smoked Oyster has brown, violet, and grey undertones — a sophisticated taupe that reads mauve in afternoon light. LRV of 22 is medium-dark, adding gravitas. The beige cladding sits naturally in the warm family. Espresso door creates the only real contrast — clean mid-century move.
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ===== PALETTE 2 ===== -->
+<div class="palette">
+  <div class="palette-header">
+    <span class="palette-num">2</span>
+    <span class="palette-title">Desert Rose · Warm Mauve</span>
+  </div>
+  <p class="palette-vibe">Unmistakably mauve — warm, earthy, confident. The beige cladding becomes a deliberate accent.</p>
+  <p class="palette-desc">This is the "yes, that's mauve" option. Hint of Mauve is a true dusty rose-taupe — you'll see the pink, especially in mountain light. It's warm enough to feel right with the beige cladding (they share the same warm base), and the LRV of 42 means it won't go dark or gloomy in winter. This is a house that knows what it wants.</p>
+
+  <div class="swatch-row">
+    <div class="swatch-card">
+      <div class="swatch-color" style="background:#C2A9A0;">
+        <span class="label">Body</span>
+      </div>
+      <div class="swatch-info">
+        <div class="swatch-name">Hint of Mauve</div>
+        <div class="swatch-code">BM 2097-50 · LRV 42</div>
+        <div class="swatch-use">Brick + stucco · uniform body</div>
+      </div>
+    </div>
+    <div class="swatch-card">
+      <div class="swatch-color" style="background:#c8b89a;">
+        <span class="label">Fixed</span>
+      </div>
+      <div class="swatch-info">
+        <div class="swatch-name">Beige Cladding</div>
+        <div class="swatch-code">Existing · cannot change</div>
+        <div class="swatch-use">Windows + sliders</div>
+      </div>
+    </div>
+    <div class="swatch-card">
+      <div class="swatch-color" style="background:#5c4a42;">
+        <span class="label">Accent</span>
+      </div>
+      <div class="swatch-info">
+        <div class="swatch-name">Café Noir</div>
+        <div class="swatch-code">BM 2098-20 · LRV 7</div>
+        <div class="swatch-use">Front door · fascia</div>
+      </div>
+    </div>
+    <div class="swatch-card">
+      <div class="swatch-color" style="background:#e2d5cc;">
+        <span class="label">Soffit</span>
+      </div>
+      <div class="swatch-info">
+        <div class="swatch-name">Cocoa Butter</div>
+        <div class="swatch-code">BM 1023 · LRV 71</div>
+        <div class="swatch-use">Soffits · garage door</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- combo strip -->
+  <div style="font-size:0.7rem; color:var(--muted); margin-bottom:6px;">How it reads together ↓</div>
+  <div class="combo-strip">
+    <div style="background:#e2d5cc;"><span class="label-bottom dark">Soffit</span></div>
+    <div style="background:#C2A9A0;"><span class="label-bottom">Stucco body</span></div>
+    <div class="thin" style="background:#c8b89a;"><span class="label-bottom dark">Cladding</span></div>
+    <div style="background:#C2A9A0;"><span class="label-bottom">Brick body</span></div>
+    <div class="thin" style="background:#5c4a42;"><span class="label-bottom">Door</span></div>
+  </div>
+
+  <div class="notes">
+    <strong>Why it works:</strong> Hint of Mauve is described by BM as "on the taupe side of mauve" with red, brown, and grey — it's the intersection of your mauve preference and the beige cladding reality. LRV 42 is lighter than Palette 1, which keeps the mountain house from feeling heavy. Cocoa Butter soffit has pink undertones that echo the body. Dark chocolate door grounds it.
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ===== PALETTE 3 ===== -->
+<div class="palette">
+  <div class="palette-header">
+    <span class="palette-num">3</span>
+    <span class="palette-title">Plum Dusk · Deep Mauve</span>
+  </div>
+  <p class="palette-vibe">Bold and dramatic — the house becomes a presence against the mountain. The beige cladding glows.</p>
+  <p class="palette-desc">The statement palette. Dusty Mauve is a true rose-brown with real depth — it will read differently at every hour, from rosy-warm in morning sun to almost plum at dusk. Against snow it's stunning; the beige cladding catches light by contrast. This is the palette if you want the house to announce itself. Not for the timid — but it's gorgeous.</p>
+
+  <div class="swatch-row">
+    <div class="swatch-card">
+      <div class="swatch-color" style="background:#A67E76;">
+        <span class="label">Body</span>
+      </div>
+      <div class="swatch-info">
+        <div class="swatch-name">Dusty Mauve</div>
+        <div class="swatch-code">BM 2174-40 · LRV 35</div>
+        <div class="swatch-use">Brick + stucco · uniform body</div>
+      </div>
+    </div>
+    <div class="swatch-card">
+      <div class="swatch-color" style="background:#c8b89a;">
+        <span class="label">Fixed</span>
+      </div>
+      <div class="swatch-info">
+        <div class="swatch-name">Beige Cladding</div>
+        <div class="swatch-code">Existing · cannot change</div>
+        <div class="swatch-use">Windows + sliders</div>
+      </div>
+    </div>
+    <div class="swatch-card">
+      <div class="swatch-color" style="background:#3d3332;">
+        <span class="label">Accent</span>
+      </div>
+      <div class="swatch-info">
+        <div class="swatch-name">Night Shade</div>
+        <div class="swatch-code">BM 2116-10 · LRV 3</div>
+        <div class="swatch-use">Front door · fascia · railings</div>
+      </div>
+    </div>
+    <div class="swatch-card">
+      <div class="swatch-color" style="background:#d8cac2;">
+        <span class="label">Soffit</span>
+      </div>
+      <div class="swatch-info">
+        <div class="swatch-name">Pale Berry</div>
+        <div class="swatch-code">BM 2103-60 · LRV 63</div>
+        <div class="swatch-use">Soffits · garage door</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- combo strip -->
+  <div style="font-size:0.7rem; color:var(--muted); margin-bottom:6px;">How it reads together ↓</div>
+  <div class="combo-strip">
+    <div style="background:#d8cac2;"><span class="label-bottom dark">Soffit</span></div>
+    <div style="background:#A67E76;"><span class="label-bottom">Stucco body</span></div>
+    <div class="thin" style="background:#c8b89a;"><span class="label-bottom dark">Cladding</span></div>
+    <div style="background:#A67E76;"><span class="label-bottom">Brick body</span></div>
+    <div class="thin" style="background:#3d3332;"><span class="label-bottom">Door</span></div>
+  </div>
+
+  <div class="notes">
+    <strong>Why it works:</strong> Dusty Mauve has orange and brown undertones per BM — it's rich without being cold or purple. The beige cladding becomes a warm highlight rather than a mismatch. Nearly black door (Night Shade) provides serious architectural contrast. This is the most "sophisticated mid-century" of the three — think Palm Springs in the mountains.
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- comparison -->
+<h2 style="font-family:'DM Serif Display',serif; font-size:1.3rem; margin-bottom:16px;">Side-by-Side Comparison</h2>
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:16px;">All three body colors next to the fixed beige cladding:</p>
+
+<div style="display:flex; gap:2px; height:120px; border-radius:12px; overflow:hidden; margin-bottom:12px; border:1px solid var(--rule);">
+  <div style="flex:1; background:#8E7F79; display:flex; align-items:flex-end; padding:8px;">
+    <span style="font-size:0.7rem; color:rgba(255,255,255,0.9); font-weight:500;">1 · Smoked Oyster</span>
+  </div>
+  <div style="flex:0.3; background:#c8b89a;"></div>
+  <div style="flex:1; background:#C2A9A0; display:flex; align-items:flex-end; padding:8px;">
+    <span style="font-size:0.7rem; color:rgba(0,0,0,0.5); font-weight:500;">2 · Hint of Mauve</span>
+  </div>
+  <div style="flex:0.3; background:#c8b89a;"></div>
+  <div style="flex:1; background:#A67E76; display:flex; align-items:flex-end; padding:8px;">
+    <span style="font-size:0.7rem; color:rgba(255,255,255,0.9); font-weight:500;">3 · Dusty Mauve</span>
+  </div>
+</div>
+<p style="font-size:0.75rem; color:var(--muted); text-align:center; margin-bottom:32px;">← Subtle · · · · · · · · · · · · · · Bold →</p>
+
+<!-- against landscape -->
+<p style="font-size:0.85rem; color:var(--muted); margin-bottom:16px;">Against the mountain landscape:</p>
+<div style="display:flex; gap:2px; height:100px; border-radius:12px; overflow:hidden; margin-bottom:8px; border:1px solid var(--rule);">
+  <div style="flex:1; background:#8faabd;"></div>
+  <div style="flex:1; background:#a5b89a;"></div>
+  <div style="flex:0.5; background:#e8dfd4;"></div>
+  <div style="flex:1.2; background:#8E7F79; display:flex; align-items:center; justify-content:center;">
+    <span style="font-size:0.65rem; color:rgba(255,255,255,0.9); font-weight:500;">1</span>
+  </div>
+  <div style="flex:0.2; background:#c8b89a;"></div>
+</div>
+<div style="display:flex; gap:2px; height:100px; border-radius:12px; overflow:hidden; margin-bottom:8px; border:1px solid var(--rule);">
+  <div style="flex:1; background:#8faabd;"></div>
+  <div style="flex:1; background:#a5b89a;"></div>
+  <div style="flex:0.5; background:#e8dfd4;"></div>
+  <div style="flex:1.2; background:#C2A9A0; display:flex; align-items:center; justify-content:center;">
+    <span style="font-size:0.65rem; color:rgba(0,0,0,0.5); font-weight:500;">2</span>
+  </div>
+  <div style="flex:0.2; background:#c8b89a;"></div>
+</div>
+<div style="display:flex; gap:2px; height:100px; border-radius:12px; overflow:hidden; margin-bottom:24px; border:1px solid var(--rule);">
+  <div style="flex:1; background:#8faabd;"></div>
+  <div style="flex:1; background:#a5b89a;"></div>
+  <div style="flex:0.5; background:#e8dfd4;"></div>
+  <div style="flex:1.2; background:#A67E76; display:flex; align-items:center; justify-content:center;">
+    <span style="font-size:0.65rem; color:rgba(255,255,255,0.9); font-weight:500;">3</span>
+  </div>
+  <div style="flex:0.2; background:#c8b89a;"></div>
+</div>
+
+<hr class="divider">
+
+<!-- next steps -->
+<h2 style="font-family:'DM Serif Display',serif; font-size:1.3rem; margin-bottom:16px;">Next Steps</h2>
+<div style="font-size:0.9rem; line-height:1.8; color:var(--muted);">
+  <p><strong>1. Order peel-and-stick samples</strong> from <a href="https://samplize.com" style="color:var(--text);">Samplize.com</a> — all three body colors + their soffit/door companions. About $6 each. Stick them on the brick AND the stucco in full sun, shade, and dusk.</p>
+  <p style="margin-top:8px;"><strong>2. Hold samples next to the beige cladding</strong> — this is the critical test. The cladding should feel like it belongs, not like an afterthought.</p>
+  <p style="margin-top:8px;"><strong>3. Look at them in snow light</strong> — winter is your dominant season visually. Colors shift cool against white ground.</p>
+  <p style="margin-top:8px;"><strong>4. Ask the stucco contractor</strong> about integral pigment smooth coat — if feasible, it's the most durable and mid-century-authentic approach.</p>
+</div>
+
+<div style="margin-top:48px; padding-top:20px; border-top:1px solid var(--rule); font-size:0.75rem; color:var(--muted);">
+  215 Aspen Drive · Exterior Palette Study · February 2026<br>
+  All colors Benjamin Moore. Screen colors are approximate — always test physical samples.
+</div>
+
+</div>
+</body>
+</html>
